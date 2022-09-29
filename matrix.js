@@ -15,12 +15,16 @@ for (var x = 0; x < columns; x++)
     drops[x] = 1;
 
 function draw() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
     ctx.fillRect(0, 0, c.width, c.height);
 
-    ctx.fillStyle = "#ff9ebe";
+    ctx.fillStyle = "#29ff00";
     ctx.font = font_size + "px 'JetBrains Mono'";
+    
     for (var i = 0; i < drops.length; i++) {
+        if (rainbowMode)
+            ctx.fillStyle = `hsl(${drops[i] * 10}, 100%, 50%)`;
+
         var text = matrix[Math.floor(Math.random() * matrix.length)];
         ctx.fillText(text, i * font_size, drops[i] * font_size);
 

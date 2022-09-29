@@ -8,7 +8,9 @@ body {
     overflow: hidden;
     background: black;
 
-    animation: hue-rotate 25s infinite linear;
+    filter: saturate(0.5);
+
+    /* animation: hue-rotate 25s infinite linear; */
 }
 
 canvas {
@@ -29,9 +31,9 @@ canvas {
 h1 {
     position: absolute;
     font-size: 2rem;
-    color: #ff9ebe;
+    color: #29ff00;
     z-index: 999;
-    text-shadow: 0 0 10px #ff9ebe;
+    text-shadow: 0 0 10px #29ff00;
 }
 
 @keyframes hue-rotate {
