@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     font-family: 'JetBrains Mono', monospace;
-    background: black;
 }
 
 body {
     overflow: hidden;
+    background: black;
 
-    /* animation: hue-rotate 25s infinite linear; */
+    animation: hue-rotate 25s infinite linear;
 }
 
 canvas {
@@ -29,11 +29,9 @@ canvas {
 h1 {
     position: absolute;
     font-size: 2rem;
-    color: #f4427d;
+    color: #ff9ebe;
     z-index: 999;
-    text-shadow: 0 0 10px #f4427d;
-    padding: 5px 15px;
-    box-shadow: 0 0 10px #000000;
+    text-shadow: 0 0 10px #ff9ebe;
 }
 
 @keyframes hue-rotate {
