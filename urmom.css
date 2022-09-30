@@ -10,7 +10,6 @@ body {
 
     filter: saturate(0.5);
 
-    /* animation: hue-rotate 25s infinite linear; */
 }
 
 canvas {
@@ -36,11 +35,66 @@ h1 {
     text-shadow: 0 0 10px #29ff00;
 }
 
+p {
+    position: absolute;
+    font-size: 1rem;
+    color: #29ff00;
+    z-index: 999;
+    text-shadow: 0 0 10px #29ff00;
+    margin-top: 75px;
+    line-height: 15px;
+}
+
+.rainbow {
+    animation: hue-rotate 2s infinite linear;
+}
+
 @keyframes hue-rotate {
     0% {
         filter: hue-rotate(0deg);
     }
+
     100% {
         filter: hue-rotate(360deg);
+    }
+}
+
+.flicker-slower {
+    animation: flicker 4s linear infinite;
+}
+
+
+.flicker-slow {
+    animation: flicker 3s linear infinite;
+}
+
+.flicker-fast {
+    animation: flicker 2s linear infinite;
+}
+
+.flicker-faster {
+    animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: .99;
+
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
     }
 }
