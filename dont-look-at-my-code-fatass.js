@@ -1,18 +1,7 @@
-// this was recommended by copilot btw 
-
-
-window.addEventListener('click', event => event.preventDefault());
-window.addEventListener('keyup', event => event.preventDefault());
-window.addEventListener('keypress', event => event.preventDefault());
-window.addEventListener('mousedown', event => event.preventDefault());
-window.addEventListener('mouseup', event => event.preventDefault());
-window.addEventListener('mousemove', event => event.preventDefault());
-window.addEventListener('contextmenu', event => event.preventDefault());
-window.addEventListener('scroll', event => event.preventDefault());
-
 let chars = '';
 let h1 = document.querySelectorAll('h1');
 let p = document.querySelectorAll('p');
+let span = document.querySelectorAll('span');
 
 let rainbowMode = false;
 
@@ -32,6 +21,7 @@ window.addEventListener('keydown', event => {
         if (rainbowMode) {
             h1.forEach(h => h.classList.add('rainbow'));
             p.forEach(p => p.classList.add('rainbow'));
+            span.forEach(p => p.classList.add('rainbow'));
         }
 
         alert('gamer mode activated');
